@@ -1,28 +1,30 @@
-# ui
+# vue-bw
+
+VueJS UI library for learning purpose
 
 ## Project setup
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Run Storybook with components
 ```
-yarn run serve
+yarn docs
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
+yarn build
 ```
 
 ### Run your tests
 ```
-yarn run test
+yarn test
 ```
 
 ### Lints and fixes files
 ```
-yarn run lint
+yarn lint
 ```
 
 ### Customize configuration
