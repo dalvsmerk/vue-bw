@@ -1,17 +1,16 @@
 .bw-button {
-    border: 2px solid #000;
-    background: #fff;
+    border: 2px solid $black;
+    background: $white;
     outline: none;
     padding: 6px 12px;
-    color: #000;
-    font-size: 12px;
+    color: $black;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
     box-sizing: border-box;
     text-transform: uppercase;
 
     &:focus {
-        outline: 4px solid rgba(79, 193, 255, 0.6);
+        outline: 4px solid $blue;
     }
 
     &:hover {
@@ -19,19 +18,19 @@
     }
 
     &:disabled {
-        border-color: #bbb;
-        color: #bbb;
+        border-color: $grey;
+        color: $grey;
         pointer-events: none;
     }
 
     &--inverted {
-        background: #000;
-        color: #fff;
+        background: $black;
+        color: $white;
     }
 
     &--inverted:disabled {
-        background: #bbb;
-        color: #fff;
+        background: $grey;
+        color: $white;
     }
 
     &--large {

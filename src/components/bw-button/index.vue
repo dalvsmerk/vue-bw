@@ -13,17 +13,26 @@
 export default {
     name: 'bw-button',
     props: {
+        /**
+         * Disables all events on button
+         */
         disabled: {
             type: Boolean,
-            defaultValue: false,
+            default: false,
         },
+        /**
+         * Makes button black
+         */
         inverted: {
             type: Boolean,
-            defaultValue: false,
+            default: false,
         },
+        /**
+         * Increases button size
+         */
         large: {
             type: Boolean,
-            defaultValue: false,
+            default: false,
         },
     },
     computed: {

@@ -20,7 +20,7 @@ export default {
          */
         type: {
             type: String,
-            defaultValue: 'text',
+            default: 'text',
         },
         /**
          * @model
@@ -42,7 +42,7 @@ export default {
          */
         multiline: {
             type: Boolean,
-            defaultValue: false,
+            default: false,
         },
     },
     computed: {
@@ -79,16 +79,20 @@ export default {
 <docs>
 default:
 ```vue
+const mock = require('./mock').default();
+
 <bw-input
-    v-model="value"
+    v-model="mock.value"
     label="Label"
     placeholder="Example"
 ></bw-input>
 ```
 multiline:
 ```vue
+const mock = require('./mock').default();
+
 <bw-input
-    v-model="value"
+    v-model="mock.value"
     label="Label"
     placeholder="Example"
     :multiline="true"
