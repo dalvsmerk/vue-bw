@@ -1,0 +1,30 @@
+.bw-input-label {
+    &__title {
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+}
+
+.bw-input {
+    border: 2px solid #000;
+    outline: none;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 12px;
+    font-family: sans-serif;
+    transition: all 0.1s ease-in-out;
+    outline-offset: 0px;
+
+    &:focus {
+        outline: 4px solid rgba(79, 193, 255, 0.6);
+    }
+
+    &--multiline {
+        min-height: 48px;
+    }
+}

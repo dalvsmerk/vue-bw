@@ -1,19 +1,21 @@
 {
   "name": "ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-bw ./src/index.js",
     "lint": "vue-cli-service lint",
-    "docs": "start-storybook -p 9001 -c .storybook"
+    "docs": "vue-styleguidist server",
+    "docs:build": "vue-styleguidist build",
+    "styleguide": "vue-cli-service styleguidist",
+    "styleguide:build": "vue-cli-service styleguidist:build"
   },
   "dependencies": {
     "vue": "^2.5.22"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
-    "@storybook/vue": "^4.1.11",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
@@ -25,9 +27,12 @@
     "lint-staged": "^8.1.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-styleguidist": "^1.0.4",
     "vue-loader": "^15.6.2",
     "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.2"
+    "vue-styleguidist": "^3.0.9",
+    "vue-template-compiler": "^2.6.2",
+    "webpack": "^4.29.3"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -39,5 +44,6 @@
     "*.vue": [
       "vue-cli-service lint"
     ]
-  }
+  },
+  "main": "./src/index.js"
 }

@@ -1,0 +1,42 @@
+.bw-button {
+    border: 2px solid #000;
+    background: #fff;
+    outline: none;
+    padding: 6px 12px;
+    color: #000;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    box-sizing: border-box;
+    text-transform: uppercase;
+
+    &:focus {
+        outline: 4px solid rgba(79, 193, 255, 0.6);
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &:disabled {
+        border-color: #bbb;
+        color: #bbb;
+        pointer-events: none;
+    }
+
+    &--inverted {
+        background: #000;
+        color: #fff;
+    }
+
+    &--inverted:disabled {
+        background: #bbb;
+        color: #fff;
+    }
+
+    &--large {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+}
