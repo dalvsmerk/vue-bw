@@ -4,6 +4,7 @@
 - [ ] message box
 - [ ] toggle
 - [ ] dropdown
+- [ ] loader
 - [ ] multiselect
 - [ ] search input
 - [ ] table

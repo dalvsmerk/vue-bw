@@ -1,4 +1,6 @@
 .bw-button {
+    @include default-margin;
+
     border: 2px solid $black;
     background: $white;
     outline: none;

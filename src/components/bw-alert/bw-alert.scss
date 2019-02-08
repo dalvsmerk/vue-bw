@@ -1,0 +1,10 @@
+.bw-alert {
+    @include default-margin;
+
+    width: 100%;
+    color: $white;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    background: $black;
+    text-transform: uppercase;
+}

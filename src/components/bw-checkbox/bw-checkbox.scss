@@ -1,4 +1,6 @@
 .bw-checkbox {
+    @include default-margin;
+
     display: inline-flex;
     align-items: center;
     cursor: pointer;
@@ -61,6 +63,6 @@
     }
 
     &__label {
-        padding: 0 12px;
+        padding-left: 12px;
     }
 }
