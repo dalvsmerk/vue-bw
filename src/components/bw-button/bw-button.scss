@@ -13,6 +13,7 @@
 
     &:focus {
         @include outline;
+        z-index: 1;
     }
 
     &:hover {
