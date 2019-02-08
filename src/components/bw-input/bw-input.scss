@@ -17,7 +17,7 @@
     outline-offset: 0px;
 
     &:focus {
-        outline: 4px solid $blue;
+        @include outline;
     }
 
     &--multiline {

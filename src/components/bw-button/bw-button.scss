@@ -10,11 +10,15 @@
     text-transform: uppercase;
 
     &:focus {
-        outline: 4px solid $blue;
+        @include outline;
     }
 
     &:hover {
-        opacity: 0.5;
+        opacity: 0.6;
+
+        &:active {
+            opacity: 1;
+        }
     }
 
     &:disabled {

@@ -1,40 +1,39 @@
-.bw-checkbox {
+.bw-radio {
+    position: relative;
+    cursor: pointer;
     display: inline-flex;
     align-items: center;
-    cursor: pointer;
-    box-sizing: border-box;
-
-    &--disabled {
-        pointer-events: none;
-
-        .bw-checkbox__check {
-            border-color: $grey;
-
-            &:before {
-                background: $grey;
-            }
-        }
-
-        .bw-checkbox__check + .bw-checkbox__label {
-            color: $grey;
-        }
-    }
 
     &__input {
         position: absolute;
+        height: 1px;
         opacity: 0;
+        outline: none;
 
-        &:active,
         &:focus {
-            & + .bw-checkbox__check {
+            & + .bw-radio__check {
                 @include outline;
             }
         }
 
         &:checked {
-            & + .bw-checkbox__check {
+            & + .bw-radio__check {
                 &:before {
                     opacity: 1;
+                }
+            }
+        }
+
+        &:disabled {
+            & + .bw-radio__check {
+                border-color: $grey;
+
+                &:before {
+                    background: $grey;
+                }
+
+                & + .bw-radio__label {
+                    color: $grey;
                 }
             }
         }
@@ -47,15 +46,17 @@
 
     &__check {
         @include input-check-box;
+        border-radius: 12px;
 
         &:before {
             display: block;
-            opacity: 0;
             content: '';
+            border-radius: 12px;
             width: 8px;
             height: 8px;
             background: $black;
             margin: 2px;
+            opacity: 0;
             transition: all 0.2s ease-in-out;
         }
     }

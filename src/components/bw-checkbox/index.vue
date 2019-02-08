@@ -7,7 +7,7 @@
             :disabled="disabled"
             @change="handleChange"
         >
-        <div :class="['bw-checkbox__check', checkStyle]"></div>
+        <div class="bw-checkbox__check"></div>
         <span class="bw-checkbox__label">{{ label }}</span>
     </label>
 </template>
@@ -50,11 +50,6 @@ export default {
                 'bw-checkbox--disabled': this.disabled,
             };
         },
-        checkStyle() {
-            return {
-                'bw-checkbox__check--checked': this.checked,
-            };
-        },
     },
     methods: {
         handleChange(event) {
@@ -73,22 +68,18 @@ export default {
 <style lang="scss" link="./bw-checkbox.scss"></style>
 
 <docs>
-default:
 ```vue
-const mock = require('./mock').default();
+const mockDefault = require('./mock').default();
+const mockDisabled = require('./mock').default();
+mockDisabled.disabled = true;
 
-<bw-checkbox label="Label" v-model="mock.checked"></bw-checkbox>
-```
-
-disabled:
-```vue
-const mock = require('./mock').default();
-mock.disabled = true;
-
-<bw-checkbox
-    label="Label"
-    v-model="mock.checked"
-    :disabled="mock.disabled"
-></bw-checkbox>
+<div>
+    <bw-checkbox label="Label" v-model="mockDefault.checked"></bw-checkbox>
+    <bw-checkbox
+        label="Label"
+        v-model="mockDisabled.checked"
+        :disabled="mockDisabled.disabled"
+    ></bw-checkbox>
+</div>
 ```
 </docs>
