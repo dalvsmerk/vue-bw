@@ -1,11 +1,15 @@
 <template>
-    <label class="bw-input-label">
+    <label :class="['bw-input-label', { 'bw-input-label--disabled': disabled }]">
         <span v-if="label" class="bw-input-label__title">{{ label }}</span>
-        <component :is="multiline ? 'textarea' : 'input'"
+        <component
+            :is="multiline ? 'textarea' : 'input'"
+            ref="input"
             :type="type"
             :class="['bw-input', style]"
             :value="value"
             :placeholder="placeholder"
+            :readonly="readonly"
+            :disabled="disabled"
             v-on="inputListeners"
         ></component>
     </label>
@@ -44,6 +48,20 @@ export default {
             type: Boolean,
             default: false,
         },
+        /**
+         * Disables text edit if true
+         */
+        readonly: {
+            type: Boolean,
+            default: false,
+        },
+        /**
+         * Disables input
+         */
+        disabled: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         style() {
@@ -79,13 +97,22 @@ export default {
 <docs>
 default:
 ```vue
-const mock = require('./mock').default();
+const mockDefault = require('./mock').default();
+const mockDisabled = require('./mock').default();
 
-<bw-input
-    v-model="mock.value"
-    label="Label"
-    placeholder="Example"
-></bw-input>
+<div>
+    <bw-input
+        v-model="mockDefault.value"
+        label="Label"
+        placeholder="Example"
+    ></bw-input>
+    <bw-input
+        v-model="mockDisabled.value"
+        label="Label"
+        placeholder="Example"
+        :disabled="true"
+    ></bw-input>
+</div>
 ```
 multiline:
 ```vue

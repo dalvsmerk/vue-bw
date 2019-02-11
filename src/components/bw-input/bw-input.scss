@@ -4,6 +4,10 @@
         padding: 6px 14px;
         text-transform: uppercase;
     }
+
+    &--disabled {
+        color: $grey;
+    }
 }
 
 .bw-input {
@@ -16,6 +20,14 @@
     max-width: 100%;
     transition: all 0.1s ease-in-out;
     outline-offset: 0px;
+
+    &:disabled {
+        border-color: $grey;
+    }
+
+    &:read-only {
+        user-select: none;
+    }
 
     &:focus {
         @include outline;
